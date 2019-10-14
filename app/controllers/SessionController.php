@@ -1,6 +1,9 @@
 <?php
 
+use Hrcontacts\Forms\RegisterForm;
 use Hrcontacts\Models\Users;
+use Phalcon\Db\RawValue;
+
 
 class SessionController extends controllerBase
 {
@@ -14,6 +17,42 @@ class SessionController extends controllerBase
 
     public function indexAction()
     {
+        $form = new RegisterForm;
+        if ($this->request->isPost()) {
+            $name = $this->request->getPost('registration_name', array('string', 'striptags'));
+            $username = $this->request->getPost('registration_username', 'alphanum');
+            $email = $this->request->getPost('registration_email', 'email');
+            $password = $this->request->getPost('registration_password');
+            $repeatPassword = $this->request->getPost('registration_repeatPassword');
+
+            if ($password != $repeatPassword) {
+                echo $password;
+                echo '<br>';
+                echo $repeatPassword;
+                $this->flash->error('Passwords are different');
+                return false;
+            }
+
+            $user = new Users;
+            $user->username = $username;
+            $user->password = sha1($password);
+            $user->name = $name;
+            $user->email = $email;
+            $user->created_at = new RawValue('NOW()');
+            $user->active = 'Y';
+
+            if (false == $user->save()) {
+                foreach ($user->getMessages() as $message) {
+                    $this->flash->error((string) $message);
+                }
+            } else {
+                $this->tag->setDefault('email', '');
+                $this->tag->setDefault('password', '');
+                $this->flash->success('Thanks for sign-up, please log-in to start generating invoices');
+                return $this->forward('session/acdone');
+            }
+        }
+        $this->view->setVar('form', $form);
     }
 
     /**
@@ -70,10 +109,9 @@ class SessionController extends controllerBase
         return $this->forward('index/index');
     }
 
-    public function registerAction()
+    public function acdoneAction()
     {
-        echo "still working";
-        exit();
+
     }
 
 }

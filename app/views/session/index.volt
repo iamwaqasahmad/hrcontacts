@@ -41,40 +41,61 @@
 
         <div class="clearfix center">
 
-            {{ form('session/register', 'id': 'registerForm', 'onbeforesubmit': 'return false') }}
+            {{ form('session/index', 'id': 'registerForm', 'onbeforesubmit': 'return false') }}
 
                 <fieldset>
 
-                    <div class="form-group">
-                        <label for="email">Name</label>
-                            <div class="controls">
-                                {{ text_field('name', 'class': "form-control") }}
-                            </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Username</label>
-                            <div class="controls">
-                                {{ text_field('username', 'class': "form-control") }}
-                            </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                            <div class="controls">
-                                {{ text_field('email', 'class': "form-control") }}
-                            </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                            <div class="controls">
-                                {{ password_field('password', 'class': "form-control") }}
-                            </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Repeat Password</label>
+                    <div class="control-group">
+                        {{ form.label('registration_name', ['class': 'control-label']) }}
                         <div class="controls">
-                            {{ password_field('repeatpassword', 'class': "form-control") }}
+                            {{ form.render('registration_name', ['class': 'form-control']) }}
+                            <p class="help-block">(required)</p>
+                            <div class="alert alert-warning" id="name_alert">
+                                <strong>Warning!</strong> Please enter your full name
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        {{ form.label('registration_username', ['class': 'control-label']) }}
+                        <div class="controls">
+                            {{ form.render('registration_username', ['class': 'form-control']) }}
+                            <p class="help-block">(required)</p>
+                            <div class="alert alert-warning" id="username_alert">
+                                <strong>Warning!</strong> Please enter your desired user name
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        {{ form.label('registration_email', ['class': 'control-label']) }}
+                        <div class="controls">
+                            {{ form.render('registration_email', ['class': 'form-control']) }}
+                            <p class="help-block">(required)</p>
+                            <div class="alert alert-warning" id="email_alert">
+                                <strong>Warning!</strong> Please enter your email
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        {{ form.label('registration_password', ['class': 'control-label']) }}
+                        <div class="controls">
+                            {{ form.render('registration_password', ['class': 'form-control']) }}
+                            <p class="help-block">(minimum 8 characters)</p>
+                            <div class="alert alert-warning" id="password_alert">
+                                <strong>Warning!</strong> Please provide a valid password
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="repeatPassword">Repeat Password</label>
+                        <div class="controls">
+                            {{ password_field('registration_repeatPassword', 'class': 'input-xlarge') }}
+                            <div class="alert" id="repeatPassword_alert">
+                                <strong>Warning!</strong> The password does not match
+                            </div>
                         </div>
                     </div>
 

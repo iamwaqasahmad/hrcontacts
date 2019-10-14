@@ -58,7 +58,7 @@ class Users extends Model
 
         $validator->add(
             'email',
-            new EmailValidator([
+            new UniquenessValidator([
                 'model' => $this,
                 'message' => 'Sorry, The email was registered by another user'
             ])
