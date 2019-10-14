@@ -5,10 +5,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-         <ul class="navbar-nav ml-auto right">
-            <li class="nav-item active">{{ link_to('', 'Home', "class" : "nav-link", "name" : "home" ) }}</li>
-            <li class="nav-item">{{ link_to('about', 'About', "class" : "nav-link", "name" : "about" ) }}<li>
-         </ul>
+          {{ elements.getMenu() }}
       </div>
     </div>
   </nav>

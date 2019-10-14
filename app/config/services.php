@@ -5,6 +5,7 @@ use Phalcon\Mvc\View\Engine\Php as PhpEngine;
 use Phalcon\Mvc\Url as UrlResolver;
 use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 use Phalcon\Mvc\Model\Metadata\Memory as MetaDataAdapter;
+use Hrcontacts\Library\Elements;
 use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Phalcon\Flash\Direct as Flash;
 
@@ -99,6 +100,13 @@ $di->set('flash', function () {
         'notice'  => 'alert alert-info',
         'warning' => 'alert alert-warning'
     ]);
+});
+
+/**
+ * Register Menu component
+ */
+$di->set('elements', function () {
+    return new Elements;
 });
 
 /**

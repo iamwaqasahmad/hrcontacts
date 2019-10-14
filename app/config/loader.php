@@ -11,3 +11,12 @@ $loader->registerDirs(
         $config->application->modelsDir
     ]
 )->register();
+
+
+$loader->registerNamespaces(
+    [
+        'Hrcontacts\Controllers'       => $config->application->controllersDir,
+        'Hrcontacts\Models' => $config->application->modelsDir,
+        'Hrcontacts\Library'     => $config->application->libraryDir,
+    ]
+)->register();
