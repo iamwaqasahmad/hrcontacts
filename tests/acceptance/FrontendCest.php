@@ -24,9 +24,13 @@ class FrontendCest
     public function loginpageWorks(AcceptanceTester $I)
     {
         $I->amOnPage('/');
-        $I->click('LogIn');
-        $I->see('Login');
+        $I->click('Account');
+        $I->see('Log in');
         $I->see('Register');
     }
+
+
+
+
 
 }

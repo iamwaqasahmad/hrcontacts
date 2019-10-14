@@ -17,6 +17,10 @@ class Elements extends Component
                 'caption' => 'Home',
                 'action' => 'index'
             ],
+            'contacts' => [
+                'caption' => 'Dashboard',
+                'action' => 'index'
+            ],
             'about' => [
                 'caption' => 'About',
                 'action' => 'index'
@@ -24,18 +28,34 @@ class Elements extends Component
         ],
         'logins' => [
             'session' => [
-                'caption' => 'LogIn',
+                'caption' => 'Account',
                 'action' => 'index'
             ],
         ]
     ];
     /**
-     * Builds header menu
+     * Builds header menu with left and right items
      *
      * @return string
      */
     public function getMenu()
     {
+        $auth = $this->session->get('auth');
+        if (isset($auth['id'])) {
+            $this->headerMenu['logins'] = [
+                'profile' => [
+                    'caption' => 'Profile',
+                    'action'  => 'edit'
+                ],
+                'session' => [
+                    'caption' => 'Log Out',
+                    'action' => 'end'
+                ]
+            ];
+        } else {
+            unset($this->headerMenu['dashboard']);
+        }
+
         $controllerName = $this->view->getControllerName();
         foreach ($this->headerMenu as $position => $menu) {
             echo '<ul class="navbar-nav ml-auto ', $position, '">';
@@ -52,7 +72,7 @@ class Elements extends Component
                     $link .= '/' . $option['params'];
                 }
 
-                echo $this->tag->linkTo(array($link, $option['caption'], "class" => "nav-link", 'name' => $option['caption']  ) );
+                echo $this->tag->linkTo(array($link, $option['caption'], "class" => "nav-link", "name" => $option['caption'] ) );
                 echo '</li>';
             }
             echo '</ul>';

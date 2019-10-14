@@ -9,5 +9,10 @@ actor: FunctionalTester
 modules:
     enabled:
         # add a framework module here
-        - \Helper\Functional
-    step_decorators: ~        
+        - Helper\Functional
+        - Asserts
+        - Phalcon:
+            bootstrap: 'app/config/bootstrap.php'
+            cleanup: true
+            savepoints: true
+    step_decorators: ~
