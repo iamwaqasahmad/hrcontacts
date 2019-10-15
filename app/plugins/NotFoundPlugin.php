@@ -49,10 +49,6 @@ class NotFoundPlugin extends Plugin
             return false;
         }
 
-        if (APP_PRODUCTION !== APPLICATION_ENV && $exception instanceof \Exception) {
-            throw $exception;
-        }
-
         $dispatcher->forward(
             [
                 'controller' => 'errors',

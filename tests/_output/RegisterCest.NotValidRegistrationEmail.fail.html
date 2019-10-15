@@ -32,7 +32,7 @@
 
 
 <div class="container content">
-        <div class="alert alert-danger">Wrong email/password</div>
+        <div class="alert alert-danger">Sorry, The email was registered by another user</div>
 
 <div class="row">
     <div class="col-md-6">
@@ -43,12 +43,12 @@
                 <div class="form-group">
                     <label for="email">Username/Email</label>
                     <div class="controls">
-                        <input type="text" id="email" name="email" value="iam@waqasahmad.net" class="form-control" />                    </div>
+                        <input type="text" id="email" name="email" class="form-control" />                    </div>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
                     <div class="controls">
-                        <input type="password" id="password" name="password" value="waqas123" class="form-control" />                    </div>
+                        <input type="password" id="password" name="password" class="form-control" />                    </div>
                 </div>
                 <div class="form-group">
                     <input type="submit" id="btn-signin" value="Login" class="btn btn-primary btn-large" />                </div>
@@ -76,7 +76,7 @@
 
                     <div class="control-group">
                         <label for="registration_name" class="control-label">Your Full Name</label>                        <div class="controls">
-                            <input type="text" id="registration_name" name="registration_name" class="form-control" />                            <p class="help-block">(required)</p>
+                            <input type="text" id="registration_name" name="registration_name" value="testingwaq" class="form-control" />                            <p class="help-block">(required)</p>
                             <div class="alert alert-warning" id="name_alert">
                                 <strong>Warning!</strong> Please enter your full name
                             </div>
@@ -85,7 +85,7 @@
 
                     <div class="control-group">
                         <label for="registration_username" class="control-label">Username</label>                        <div class="controls">
-                            <input type="text" id="registration_username" name="registration_username" class="form-control" />                            <p class="help-block">(required)</p>
+                            <input type="text" id="registration_username" name="registration_username" value="ytoq6e@test.com" class="form-control" />                            <p class="help-block">(required)</p>
                             <div class="alert alert-warning" id="username_alert">
                                 <strong>Warning!</strong> Please enter your desired user name
                             </div>
@@ -94,7 +94,7 @@
 
                     <div class="control-group">
                         <label for="registration_email" class="control-label">E-Mail</label>                        <div class="controls">
-                            <input type="text" id="registration_email" name="registration_email" class="form-control" />                            <p class="help-block">(required)</p>
+                            <input type="text" id="registration_email" name="registration_email" value="wrongemail" class="form-control" />                            <p class="help-block">(required)</p>
                             <div class="alert alert-warning" id="email_alert">
                                 <strong>Warning!</strong> Please enter your email
                             </div>
@@ -103,7 +103,7 @@
 
                     <div class="control-group">
                         <label for="registration_password" class="control-label">Password</label>                        <div class="controls">
-                            <input type="password" id="registration_password" name="registration_password" class="form-control" />                            <p class="help-block">(minimum 8 characters)</p>
+                            <input type="password" id="registration_password" name="registration_password" value="test123" class="form-control" />                            <p class="help-block">(minimum 8 characters)</p>
                             <div class="alert alert-warning" id="password_alert">
                                 <strong>Warning!</strong> Please provide a valid password
                             </div>
@@ -113,13 +113,11 @@
                     <div class="control-group">
                         <label class="control-label" for="repeatPassword">Repeat Password</label>
                         <div class="controls">
-                            <input type="password" id="registration_repeatPassword" name="registration_repeatPassword" class="input-xlarge" />                            <div class="alert" id="repeatPassword_alert">
+                            <input type="password" id="registration_repeatPassword" name="registration_repeatPassword" value="test123" class="input-xlarge" />                            <div class="alert" id="repeatPassword_alert">
                                 <strong>Warning!</strong> The password does not match
                             </div>
                         </div>
                     </div>
-
-                     <input type="hidden" name="action" value="registration">
 
                     <div class="form-actions">
                         <input type="submit" value="Register" class="btn btn-primary" onclick="return SignUp.validate();" />                        <p class="help-block">By signing up, you accept terms of use and privacy policy.</p>

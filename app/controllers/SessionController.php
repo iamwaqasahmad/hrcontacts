@@ -18,7 +18,7 @@ class SessionController extends controllerBase
     public function indexAction()
     {
         $form = new RegisterForm;
-        if ($this->request->isPost()) {
+        if ($this->request->isPost() && $this->request->getPost('action') === 'registration') {
             $name = $this->request->getPost('registration_name', array('string', 'striptags'));
             $username = $this->request->getPost('registration_username', 'alphanum');
             $email = $this->request->getPost('registration_email', 'email');
@@ -48,7 +48,7 @@ class SessionController extends controllerBase
             } else {
                 $this->tag->setDefault('email', '');
                 $this->tag->setDefault('password', '');
-                $this->flash->success('Thanks for sign-up, please log-in to start generating invoices');
+                $this->flash->success('Thanks for sign-up, please log-in to start generating Contacts');
                 return $this->forward('session/acdone');
             }
         }

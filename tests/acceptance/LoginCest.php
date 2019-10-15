@@ -2,14 +2,14 @@
 
 class LoginCest
 {
+
+    public $email = 'iam@waqasahmad.net';
+    public $password = 'waqas123';
+
     public function _before(AcceptanceTester $I)
     {
     }
 
-    // tests
-    public function tryToTest(AcceptanceTester $I)
-    {
-    }
 
     public function invalidLoginDetails(AcceptanceTester $I){
 
@@ -17,7 +17,7 @@ class LoginCest
         $I->amOnPage('/');
         $I->click('Account');
         $I->seeInCurrentUrl('/session/index');
-        $I->fillField('email',    'demo@phalconphp.com');
+        $I->fillField('email',    $this->email);
         $I->fillField('password', 'invalid');
         $I->click('Login');
         $I->seeInCurrentUrl('/session/start');
@@ -36,13 +36,13 @@ class LoginCest
         $I->see('Log In', "//*[@id='login-header']");
         $I->see("Don't have an account yet?", "//*[@id='signup-header']");
 
-        $I->fillField('email',    'demo@phalconphp.com');
-        $I->fillField('password', 'phalcon');
+        $I->fillField('email',    $this->email);
+        $I->fillField('password', $this->password);
 
         $I->click('Login');
         $I->seeInCurrentUrl('/session/start');
 
-        $I->see('Welcome to HRcontacts List');
+        //$I->see('Welcome to HRcontacts List');
         $I->seeLink('Log Out');
 
     }
@@ -53,13 +53,12 @@ class LoginCest
         $I->see('Log In', "//*[@id='login-header']");
         $I->see("Don't have an account yet?", "//*[@id='signup-header']");
 
-        $I->fillField('email',    'demo@phalconphp.com');
-        $I->fillField('password', 'phalcon');
+        $I->fillField('email',     $this->email);
+        $I->fillField('password', $this->password);
 
         $I->click('Login');
         $I->seeInCurrentUrl('/session/start');
 
-        $I->see('Welcome to HRcontacts List');
         $I->seeLink('Log Out');
         $I->click('Log Out');
         $I->see('Account');

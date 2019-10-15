@@ -99,6 +99,8 @@
                         </div>
                     </div>
 
+                     <input type="hidden" name="action" value="registration">
+
                     <div class="form-actions">
                         {{ submit_button('Register', 'class': 'btn btn-primary', 'onclick': 'return SignUp.validate();') }}
                         <p class="help-block">By signing up, you accept terms of use and privacy policy.</p>

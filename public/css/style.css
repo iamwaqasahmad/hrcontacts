@@ -18,3 +18,15 @@ body {
 .logins{
     margin-left: 0px !important;
 }
+.content{
+    padding: 50px;
+}
+.create-btn{
+    margin-bottom : 10px;
+}
+.search-btn {
+    margin-top: 10px;
+}
+.no-contacts{
+    margin-top : 80px;
+}

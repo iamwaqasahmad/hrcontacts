@@ -27,9 +27,8 @@ extensions:
 modules:
     config:
         Db:
-            dsn: 'mysql:host=localhost;dbname=phalcon_demo'
-            user: 'root'
-            password: ''
-            dump: tests/_data/dump.sql
+            dsn: 'mysql:host=localhost;dbname=abc;charset=utf8;Type:InnoDB'
+            user: 'phalcon'
+            password: 'waqas123'
+            dump: tests/_data/phalcon01.sql
             populate: true
-            cleanup: true
