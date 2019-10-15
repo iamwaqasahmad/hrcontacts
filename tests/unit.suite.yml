@@ -7,12 +7,7 @@ modules:
     enabled:
         - Asserts
         - Helper\Unit
-        - Db:
-            dsn: 'mysql:host=localhost;dbname=abc;charset=utf8;Type:InnoDB'
-            user: 'phalcon'
-            password: 'waqas123'
-            dump: tests/_data/phalcon01.sql
-            populate: true
+        - Db
         - Phalcon:
             bootstrap: app/config/bootstrap.php
             cleanup: true

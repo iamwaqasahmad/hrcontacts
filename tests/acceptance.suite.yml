@@ -8,7 +8,6 @@ actor: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
-            url: http://hrcontacts.kp
         - \Helper\Acceptance
 
 

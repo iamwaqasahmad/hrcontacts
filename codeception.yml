@@ -32,3 +32,5 @@ modules:
             password: 'waqas123'
             dump: tests/_data/phalcon01.sql
             populate: true
+        PhpBrowser:
+            url: http://hrcontacts.kp
