@@ -41,8 +41,6 @@ CREATE TABLE IF NOT EXISTS `contacts` (
 -- Dumping data for table `contacts`
 --
 
-INSERT INTO `contacts` (`id`, `user_id`, `first_name`, `last_name`, `email`, `phone_no`, `create_date`) VALUES
-(1, 1, 'waqas', 'ahmed', 'waqas.igocl@gmail.com', '03419424340', '2019-10-15 15:57:29');
 
 -- --------------------------------------------------------
 
@@ -65,8 +63,6 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`1`,`username`, `password`, `name`, `email`, `created_at`, `active`) VALUES
-(1, 'waqas', '9e913156354a3626f9028325f387a212f2ec544d', 'waqas ahmad', 'iam@waqasahmad.net', '2019-10-15 15:57:08', 'Y');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
