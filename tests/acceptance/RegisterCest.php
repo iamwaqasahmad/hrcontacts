@@ -27,7 +27,7 @@ class RegisterCest
         $I->click('Register');
         $I->seeInCurrentUrl('/session/index');
 
-        $I->see('Thanks for sign-up, please log-in to start generating Contacts');
+        $I->see('You are succesfully registered please login now.');
 
     }
 
@@ -44,7 +44,7 @@ class RegisterCest
 
         $I->fillField('registration_name',    'testingwaq');
         $I->fillField('registration_username', $this->_generateEmailAddress());
-        $I->fillField('registration_email',    'wrongemail');
+        $I->fillField('registration_email',    'iam@waqasahmad.net');
         $I->fillField('registration_password', 'test123');
         $I->fillField('registration_repeatPassword', 'test123');
 

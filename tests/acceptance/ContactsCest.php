@@ -53,8 +53,8 @@ class ContactsCest
         $I->see('Log In', "//*[@id='login-header']");
         $I->see("Don't have an account yet?", "//*[@id='signup-header']");
 
-        $I->fillField('email',    'demo@phalconphp.com');
-        $I->fillField('password', 'phalcon');
+        $I->fillField('email',    $this->email);
+        $I->fillField('password', $this->password);
 
         $I->click('Login');
         $I->seeInCurrentUrl('/session/start');

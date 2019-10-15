@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 15, 2019 at 09:55 AM
+-- Generation Time: Oct 15, 2019 at 03:57 PM
 -- Server version: 5.6.37
 -- PHP Version: 7.1.8
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `phalcon01`
+-- Database: `hrcontacts`
 --
 
 -- --------------------------------------------------------
@@ -34,9 +34,15 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   `email` varchar(255) CHARACTER SET latin1 NOT NULL,
   `phone_no` varchar(255) CHARACTER SET latin1 NOT NULL,
   `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `user_id`, `first_name`, `last_name`, `email`, `phone_no`, `create_date`) VALUES
+(1, 1, 'waqas', 'ahmed', 'waqas.igocl@gmail.com', '03419424340', '2019-10-15 15:57:29');
 
 -- --------------------------------------------------------
 
@@ -53,8 +59,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `active` char(1) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`1`,`username`, `password`, `name`, `email`, `created_at`, `active`) VALUES
+(1, 'waqas', '9e913156354a3626f9028325f387a212f2ec544d', 'waqas ahmad', 'iam@waqasahmad.net', '2019-10-15 15:57:08', 'Y');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
