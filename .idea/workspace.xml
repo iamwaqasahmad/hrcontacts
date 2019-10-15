@@ -2,40 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd81e6c9-b885-4ff2-878b-cd6cbfd44c26" name="Default" comment="Codeception Testings Dependecies Added">
-      <change afterPath="$PROJECT_DIR$/app/forms/ContactsForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Contacts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/acceptance/ContactsCest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/acceptance/RegisterCest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/functional/AuthorizedVisitCept.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/functional/LogOutCept.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/Model/ContactsTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/Model/UsersTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hrcontacts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hrcontacts.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/ProfileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/profile.volt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/ContactsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ContactsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/SessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/SessionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/plugins/NotFoundPlugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/plugins/NotFoundPlugin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/contacts/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/contacts/index.volt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/index/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/index/index.volt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/about.volt" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/about.volt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/contacts.volt" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/contacts.volt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/errors.volt" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/errors.volt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/session.volt" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/session.volt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/session/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/session/index.volt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codeception.yml" beforeDir="false" afterPath="$PROJECT_DIR$/codeception.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_output/LoginCest.CorrectLoginDetails.fail.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_output/LoginCest.CorrectLoginDetails.fail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_output/LoginCest.Logout.fail.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_output/LoginCest.Logout.fail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_support/_generated/FunctionalTesterActions.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_support/_generated/FunctionalTesterActions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_support/_generated/UnitTesterActions.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_support/_generated/UnitTesterActions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/acceptance.suite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/acceptance.suite.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/acceptance/FrontendCest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/acceptance/FrontendCest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/acceptance/LoginCest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/acceptance/LoginCest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit.suite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit.suite.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/script.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,18 +33,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ContactsTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/unit/Model/ContactsTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="39" />
-              <folding>
-                <element signature="e#7#22#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LoginCest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/acceptance/LoginCest.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -84,11 +42,77 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterCest.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RegisterCest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/acceptance/RegisterCest.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="513">
               <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/ProfileController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/profile.volt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.volt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/profile/edit.volt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/index.volt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/session/index.volt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="104" column="96" selection-start-line="104" selection-start-column="93" selection-end-line="104" selection-end-column="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessionController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/SessionController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="37" column="34" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="34" />
+              <folding>
+                <element signature="e#7#41#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,50 +122,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-476">
               <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsersTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/unit/Model/UsersTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#38#53#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/contacts/index.volt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="53" column="149" selection-start-line="53" selection-start-column="145" selection-end-line="53" selection-end-column="149" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_bootstrap.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/acceptance/_bootstrap.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="FrontendCest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/acceptance/FrontendCest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -165,11 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/acceptance/LoginCept.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ControllerBase.php" />
-        <option value="$PROJECT_DIR$/app/config/config.php" />
-        <option value="$PROJECT_DIR$/app/views/index.volt" />
-        <option value="$PROJECT_DIR$/public/js/script.js" />
         <option value="$PROJECT_DIR$/app/forms/RegisterForm.php" />
         <option value="$PROJECT_DIR$/app/views/session/acdone.volt" />
         <option value="$PROJECT_DIR$/app/models/Users.php" />
@@ -216,6 +191,11 @@
         <option value="$PROJECT_DIR$/tests/acceptance/_fakeemail.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/ContactsCest.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/RegisterCest.php" />
+        <option value="$PROJECT_DIR$/app/views/profile/index.volt.php" />
+        <option value="$PROJECT_DIR$/app/views/profile/index.volt" />
+        <option value="$PROJECT_DIR$/app/controllers/ProfileController.php" />
+        <option value="$PROJECT_DIR$/public/js/script.js" />
+        <option value="$PROJECT_DIR$/app/views/profile/edit.volt" />
       </list>
     </option>
   </component>
@@ -294,7 +274,7 @@
       <path value="$PROJECT_DIR$/vendor/league/factory-muffin" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-25" />
     <option name="width" value="2170" />
     <option name="height" value="1145" />
@@ -327,12 +307,6 @@
               <item name="hrcontacts" type="b2602c69:ProjectViewProjectNode" />
               <item name="hrcontacts" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrcontacts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrcontacts" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -340,7 +314,7 @@
               <item name="hrcontacts" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="contacts" type="462c0819:PsiDirectoryNode" />
+              <item name="profile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hrcontacts" type="b2602c69:ProjectViewProjectNode" />
@@ -352,32 +326,18 @@
             <path>
               <item name="hrcontacts" type="b2602c69:ProjectViewProjectNode" />
               <item name="hrcontacts" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrcontacts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrcontacts" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hrcontacts" type="b2602c69:ProjectViewProjectNode" />
               <item name="hrcontacts" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="acceptance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrcontacts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrcontacts" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="functional" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrcontacts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrcontacts" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="unit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrcontacts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrcontacts" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="unit" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -395,8 +355,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Ampps\www\hrcontacts\tests\acceptance" />
       <recent name="C:\Ampps\www\hrcontacts\app\views\layouts" />
+      <recent name="C:\Ampps\www\hrcontacts\tests\acceptance" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Ampps\www\hrcontacts\tests\functional" />
@@ -425,7 +385,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571060016918</updated>
       <workItem from="1571060018572" duration="12477000" />
-      <workItem from="1571089177552" duration="30986000" />
+      <workItem from="1571089177552" duration="32549000" />
     </task>
     <task id="LOCAL-00001" summary="Htacess and htrouter file">
       <created>1571060799727</created>
@@ -445,7 +405,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43463000" />
+    <option name="totallyTimeSpent" value="45026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -486,48 +446,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Codeception Testings Dependecies Added" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/plugins/Acl/Resource/ResourceInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/plugins/Acl/SecurityPlugin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-578">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/plugins/Acl/Resource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ErrorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AboutController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ErrorsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/errors/show401.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -595,13 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -740,16 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/SessionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-          <folding>
-            <element signature="e#7#41#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Contacts.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -762,13 +663,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance/ContactsTest.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/session/index.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="101" column="75" selection-start-line="101" selection-start-column="63" selection-end-line="101" selection-end-column="75" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/unit.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -842,10 +736,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/profile/index.volt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#1064#1070#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/profile/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="87" lean-forward="true" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance/RegisterCest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/SessionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="34" />
+          <folding>
+            <element signature="e#7#41#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/profile.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/session/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="104" column="96" selection-start-line="104" selection-start-column="93" selection-end-line="104" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/profile/edit.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
         </state>
       </provider>
     </entry>
