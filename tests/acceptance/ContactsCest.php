@@ -62,22 +62,24 @@ class ContactsCest
         $I->fillField('registration_repeatPassword', 'test123');
 
         $I->click('Register');
-
-
-        $I->amOnPage('/');
-        $I->click('Account');
-        $I->seeInCurrentUrl('/session/index');
-
-        $I->see('Log In', "//*[@id='login-header']");
-        $I->see("Don't have an account yet?", "//*[@id='signup-header']");
+        $I->amOnPage('/session/index');
 
         $I->fillField('email',    'acceptance@test.com');
         $I->fillField('password', 'test123');
 
         $I->click('Login');
-        $I->seeInCurrentUrl('/session/start');
-        $I->amOnPage('/contacts/index/');
-        $I->seeLink('Log Out');
+         $I->seeLink('Log Out');
+       $I->click('Create Contacts');
+        $I->seeInCurrentUrl('/contacts/new');
+   
+
+        $I->fillField('first_name',    'waqas');
+        $I->fillField('last_name', 'acceptance');
+        $I->fillField('phone_no',    'acceptance@waqas.com');
+        $I->fillField('email', 'email@test.com');
+
+        $I->click('Save');
+		$I->seeInCurrentUrl('/contacts/create');
         $I->click('.edit');
         $I->see("Edit contacts");
         $I->fillField('first_name',    'edit waqas');

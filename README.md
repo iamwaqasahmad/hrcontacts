@@ -1,5 +1,13 @@
 # HR Contacts
 
+## Description
+
+HR Contacts list provides a solution for users to login, register and creates their contacts with an interactive user interface. 
+
+* After login user see a dashboard where he can view and add/edit/delete contacts. 
+* A user can also search contacts by Name, Phone and Email.  
+
+
 ## Setup
 
 **System requirements**
@@ -14,10 +22,10 @@
 
 Run the following commands in order to start the project
 
-- `git clone git@github.com:iamwaqasahmad/hrcontacts.git`
 - `composer install`
 - `phalcon migration --action=run`
 - `phalcon serve`
+- Open `http://localhost:8000/` in browser
 
 **Note:** Change database details + base uri in `app/config/config.php`
 and also `codeception.yml` for testing

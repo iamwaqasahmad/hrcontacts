@@ -44,14 +44,14 @@ class RegisterCest
 
         $I->fillField('registration_name',    'testingwaq');
         $I->fillField('registration_username', $this->_generateEmailAddress());
-        $I->fillField('registration_email',    'iam@waqasahmad.net');
+        $I->fillField('registration_email',    'jjj');
         $I->fillField('registration_password', 'test123');
         $I->fillField('registration_repeatPassword', 'test123');
 
         $I->click('Register');
         $I->seeInCurrentUrl('/session/index');
 
-        $I->see(' Sorry, The email was registered by another user');
+        $I->see('Sorry, Invalid Email.');
 
     }
 
