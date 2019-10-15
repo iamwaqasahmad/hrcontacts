@@ -2,13 +2,47 @@
 
 use Phalcon\Mvc\View;
 use Phalcon\Mvc\View\Engine\Php as PhpEngine;
+use Phalcon\Mvc\Dispatcher;
 use Phalcon\Mvc\Url as UrlResolver;
 use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 use Phalcon\Mvc\Model\Metadata\Memory as MetaDataAdapter;
+use Phalcon\Events\Manager as EventsManager;
 use Hrcontacts\Library\Elements;
+use Hrcontacts\Plugins\NotFoundPlugin;
+use Hrcontacts\Plugins\Acl\Resource;
+use Hrcontacts\Plugins\Acl\SecurityPlugin;
 use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Phalcon\Flash\Direct as Flash;
 
+
+$eventsManager = new EventsManager;
+
+$di->setShared('eventsManager', $eventsManager);
+
+/**
+ * We register the events manager
+ */
+$di->setShared('dispatcher', function () use ($eventsManager) {
+    $securityPlugin = new SecurityPlugin;
+    $securityPlugin->setResources(new Resource);
+
+    /**
+     * Check if the user is allowed to access certain action using the SecurityPlugin
+     */
+    $eventsManager->attach('dispatch:beforeDispatch', $securityPlugin);
+
+    /**
+     * Handle exceptions and not-found exceptions using NotFoundPlugin
+     */
+    $eventsManager->attach('dispatch:beforeException', new NotFoundPlugin);
+
+    $dispatcher = new Dispatcher;
+
+    // $dispatcher->setDefaultNamespace('HeroContact\Controllers');
+    $dispatcher->setEventsManager($eventsManager);
+
+    return $dispatcher;
+});
 /**
  * Shared configuration service
  */
@@ -31,7 +65,7 @@ $di->setShared('url', function () {
 /**
  * Setting up the view component
  */
-$di->setShared('view', function () {
+$di->setShared('view', function () use ($di, $eventsManager) {
     $config = $this->getConfig();
 
     $view = new View();
@@ -48,12 +82,31 @@ $di->setShared('view', function () {
                 'compiledPath' => $config->application->cacheDir,
                 'compiledSeparator' => '_'
             ]);
+            $volt->getCompiler()
+                ->addFunction('strtotime', 'strtotime')
+                ->addFunction('sprintf', 'sprintf')
+                ->addFunction('str_replace', 'str_replace')
+                ->addFunction('is_a', 'is_a');
+
 
             return $volt;
         },
         '.phtml' => PhpEngine::class
 
     ]);
+
+    $eventsManager->attach('view', function ($event, $view) use ($di, $config) {
+        /**
+         * @var \Phalcon\Events\Event $event
+         * @var \Phalcon\Mvc\View $view
+         */
+        if ($event->getType() == 'notFoundView') {
+            $message = sprintf('View not found - %s', $view->getActiveRenderPath());
+            throw new Exception($message);
+        }
+    });
+
+    $view->setEventsManager($eventsManager);
 
     return $view;
 });
