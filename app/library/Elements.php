@@ -53,7 +53,7 @@ class Elements extends Component
                 ]
             ];
         } else {
-            unset($this->headerMenu['dashboard']);
+            unset($this->headerMenu['contacts']);
         }
 
         $controllerName = $this->view->getControllerName();

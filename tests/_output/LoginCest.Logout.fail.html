@@ -11,10 +11,10 @@
   <title>Home : Contacts List</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="http://localhost:8000css/style.css" />
+  <link rel="stylesheet" type="text/css" href="http://hrcontacts.kp/css/style.css" />
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="http://localhost:8000img/favicon.ico"/>
+  <link rel="shortcut icon" type="image/x-icon" href="http://hrcontacts.kp/img/favicon.ico"/>
 
 </head>
 
@@ -26,28 +26,29 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto public"><li class="nav-item"><a href="http://localhost:8000index/index" name="Home" class="nav-link">Home</a></li><li class="nav-item"><a href="http://localhost:8000contacts/index" name="Dashboard" class="nav-link">Dashboard</a></li><li class="nav-item"><a href="http://localhost:8000about/index" name="About" class="nav-link">About</a></li></ul><ul class="navbar-nav ml-auto logins"><li class="nav-item active"><a href="http://localhost:8000session/index" name="Account" class="nav-link">Account</a></li></ul>      </div>
+          <ul class="navbar-nav ml-auto public"><li class="nav-item"><a href="http://hrcontacts.kp/index/index" name="Home" class="nav-link">Home</a></li><li class="nav-item"><a href="http://hrcontacts.kp/contacts/index" name="Dashboard" class="nav-link">Dashboard</a></li><li class="nav-item"><a href="http://hrcontacts.kp/about/index" name="About" class="nav-link">About</a></li></ul><ul class="navbar-nav ml-auto logins"><li class="nav-item active"><a href="http://hrcontacts.kp/session/index" name="Account" class="nav-link">Account</a></li></ul>      </div>
     </div>
   </nav>
 
 
 <div class="container content">
-        
+        <div class="alert alert-danger">Wrong email/password</div>
+
 <div class="row">
     <div class="col-md-6">
         <div class="page-header">
             <h2 id="login-header">Log In</h2>
         </div>
-        <form action="http://localhost:8000session/start" role="form" method="post">            <fieldset>
+        <form action="http://hrcontacts.kp/session/start" role="form" method="post">            <fieldset>
                 <div class="form-group">
                     <label for="email">Username/Email</label>
                     <div class="controls">
-                        <input type="text" id="email" name="email" class="form-control" />                    </div>
+                        <input type="text" id="email" name="email" value="iam@waqasahmad.net" class="form-control" />                    </div>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
                     <div class="controls">
-                        <input type="password" id="password" name="password" class="form-control" />                    </div>
+                        <input type="password" id="password" name="password" value="waqas123" class="form-control" />                    </div>
                 </div>
                 <div class="form-group">
                     <input type="submit" id="btn-signin" value="Login" class="btn btn-primary btn-large" />                </div>
@@ -70,7 +71,7 @@
 
         <div class="clearfix center">
 
-            <form action="http://localhost:8000session/index" id="registerForm" onbeforesubmit="return false" method="post">
+            <form action="http://hrcontacts.kp/session/index" id="registerForm" onbeforesubmit="return false" method="post">
                 <fieldset>
 
                     <div class="control-group">
@@ -145,7 +146,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="http://localhost:8000js/script.js"></script>
+    <script type="text/javascript" src="http://hrcontacts.kp/js/script.js"></script>
 
 </body>
 

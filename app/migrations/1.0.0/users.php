@@ -106,27 +106,6 @@ class UsersMigration_100 extends Migration
      */
     public function up()
     {
-        self::$_connection->insert(
-            'users',
-            [
-                1,
-                'waqas',
-                '9e913156354a3626f9028325f387a212f2ec544d',
-                'waqas ahmad',
-                'iam@waqasahmad.net',
-                '2019-10-15 15:57:08',
-                'Y'
-            ],
-            [
-                'id',
-                'username',
-                'password',
-                'name',
-                'email',
-                'created_at',
-                'active'
-            ]
-        );
     }
 
     /**

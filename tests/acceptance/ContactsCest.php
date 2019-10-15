@@ -4,17 +4,21 @@ use Codeception\Util\Locator;
 
 class ContactsCest
 {
-    public $email = 'iam@waqasahmad.net';
-    public $password = 'waqas123';
-
-    protected $fake_email;
-
-    public function _before(AcceptanceTester $I)
-    {
-
-    }
     public function createContactsAcceptance(AcceptanceTester $I){
         $I->wantTo('Create a new contact');
+
+        $I->amOnPage('/');
+        $I->click('Account');
+        $I->seeInCurrentUrl('/session/index');
+
+        $I->fillField('registration_name',    'acceptance Test');
+        $I->fillField('registration_username', 'acceptancetest');
+        $I->fillField('registration_email',    'acceptance@test.com');
+        $I->fillField('registration_password', 'test123');
+        $I->fillField('registration_repeatPassword', 'test123');
+
+        $I->click('Register');
+
 
         $I->amOnPage('/');
         $I->click('Account');
@@ -23,8 +27,8 @@ class ContactsCest
         $I->see('Log In', "//*[@id='login-header']");
         $I->see("Don't have an account yet?", "//*[@id='signup-header']");
 
-        $I->fillField('email',    $this->email);
-        $I->fillField('password', $this->password);
+        $I->fillField('email',    'acceptance@test.com');
+        $I->fillField('password', 'test123');
 
         $I->click('Login');
         $I->seeInCurrentUrl('/session/start');
@@ -46,6 +50,20 @@ class ContactsCest
     }
     public function editContactsAcceptance(AcceptanceTester $I){
         $I->wantTo('update a contact');
+
+        $I->amOnPage('/');
+        $I->click('Account');
+        $I->seeInCurrentUrl('/session/index');
+
+        $I->fillField('registration_name',    'acceptance Test');
+        $I->fillField('registration_username', 'acceptancetest');
+        $I->fillField('registration_email',    'acceptance@test.com');
+        $I->fillField('registration_password', 'test123');
+        $I->fillField('registration_repeatPassword', 'test123');
+
+        $I->click('Register');
+
+
         $I->amOnPage('/');
         $I->click('Account');
         $I->seeInCurrentUrl('/session/index');
@@ -53,8 +71,8 @@ class ContactsCest
         $I->see('Log In', "//*[@id='login-header']");
         $I->see("Don't have an account yet?", "//*[@id='signup-header']");
 
-        $I->fillField('email',    $this->email);
-        $I->fillField('password', $this->password);
+        $I->fillField('email',    'acceptance@test.com');
+        $I->fillField('password', 'test123');
 
         $I->click('Login');
         $I->seeInCurrentUrl('/session/start');

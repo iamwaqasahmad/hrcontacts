@@ -3,7 +3,6 @@ namespace Hrcontacts\Models;
 
 use Phalcon\Validation;
 use Phalcon\Validation\Validator\Email as EmailValidator;
-use Hrcontacts\Plugins\Acl;
 
 class Contacts extends \Phalcon\Mvc\Model
 {

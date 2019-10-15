@@ -28,17 +28,16 @@ class ContactsController extends ControllerBase
         $this->session->set('conditions', null);
         $numberPage = 1;
         $user_id = $this->session->get('auth')['id'];
+        $values = array();
         if ($this->request->isPost()) {
             $values = $this->request->getPost();
-            $values['user_id'] = $user_id;
-            $query = Criteria::fromInput($this->di, 'Hrcontacts\Models\Contacts', $values);
-            $this->persistent->set('searchParams', $query->getParams());
         } else {
-            $values['user_id'] = $user_id;
-            $query = Criteria::fromInput($this->di, 'Hrcontacts\Models\Contacts', $values);
-            $this->persistent->set('searchParams', $query->getParams());
             $numberPage = $this->request->getQuery("page", "int");
         }
+        $values['user_id'] = $user_id;
+        $query = Criteria::fromInput($this->di, 'Hrcontacts\Models\Contacts', $values);
+        $this->persistent->set('searchParams', $query->getParams());
+
         $parameters = $this->persistent->get('searchParams', []);
 
         $contacts = Contacts::find(
@@ -53,42 +52,6 @@ class ContactsController extends ControllerBase
 
         $this->view->setVar('page', $paginator->getPaginate());
 
-    }
-
-    /**
-     * Search contacts based on current criteria
-     */
-    public function searchAction()
-    {
-        $numberPage = 1;
-        if ($this->request->isPost()) {
-            $query = Criteria::fromInput($this->di, 'Hrcontacts\Models\Contacts', $this->request->getPost());
-            $this->persistent->set('searchParams', $query->getParams());
-
-
-        } else {
-            $numberPage = $this->request->getQuery("page", "int");
-        }
-
-        $parameters = $this->persistent->get('searchParams', []);
-
-
-        $parameters['conditions'] = ($parameters['conditions'] == '' ? '[user_id] = :user_id:' : '[user_id] = :user_id: AND' .$parameters['conditions']);
-        $parameters['bind']['user_id'] =  $this->session->get('auth')['id'];
-        $contacts = Contacts::find($parameters);
-
-        if (!$contacts->count()) {
-            $this->flash->notice("The search did not find any Contacts");
-            return $this->forward("contacts/index");
-        }
-
-        $paginator = new Paginator([
-            'data'  => $contacts,
-            'limit' => 10,
-            'page'  => $numberPage
-        ]);
-
-        $this->view->setVar('page', $paginator->getPaginate());
     }
 
     /**

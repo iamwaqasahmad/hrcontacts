@@ -5,6 +5,13 @@ use Hrcontacts\Models\Users;
 
 class ProfileController extends ControllerBase
 {
+    public function initialize()
+    {
+        $this->tag->setTitle('Profile');
+
+        parent::initialize();
+    }
+
     /**
      * Edit the active user profile
      */

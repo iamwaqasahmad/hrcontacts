@@ -20,14 +20,14 @@ class RegisterCest
 
         $I->fillField('registration_name',    'testingwaq');
         $I->fillField('registration_username', $this->_generateEmailAddress());
-        $I->fillField('registration_email',    $this->_generateEmailAddress());
+        $I->fillField('registration_email',    'asdc');
         $I->fillField('registration_password', 'test123');
         $I->fillField('registration_repeatPassword', 'test123');
 
         $I->click('Register');
         $I->seeInCurrentUrl('/session/index');
 
-        $I->see('You are succesfully registered please login now.');
+        $I->see('invalid email');
 
     }
 

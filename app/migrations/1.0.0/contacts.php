@@ -107,26 +107,6 @@ class ContactsMigration_100 extends Migration
      */
     public function up()
     {
-        self::$_connection->insert(
-            'users',
-            [
-                1,
-                1,
-                'waqas',
-                'ahmed',
-                'waqas.igocl@gmail.com',
-                '03419424340',
-                '2019-10-15 15:57:29'
-            ],
-            [
-                'id',
-                'user_id',
-                'first_name', 'last_name',
-                'email',
-                'phone_no',
-                'create_date'
-            ]
-        );
     }
 
     /**

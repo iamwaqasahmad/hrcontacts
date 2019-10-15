@@ -65,6 +65,14 @@ class Users extends Model
         );
 
         $validator->add(
+            'email',
+            new EmailValidator([
+                'model' => $this,
+                'message' => 'Sorry, Invalid Email.'
+            ])
+        );
+
+        $validator->add(
             'username',
             new UniquenessValidator([
                 'model' => $this,

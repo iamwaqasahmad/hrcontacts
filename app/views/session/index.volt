@@ -50,7 +50,7 @@
                         <div class="controls">
                             {{ form.render('registration_name', ['class': 'form-control']) }}
                             <p class="help-block">(required)</p>
-                            <div class="alert alert-warning" id="name_alert">
+                            <div class="alert alert-warning" id="registration_name_alert">
                                 <strong>Warning!</strong> Please enter your full name
                             </div>
                         </div>
@@ -61,7 +61,7 @@
                         <div class="controls">
                             {{ form.render('registration_username', ['class': 'form-control']) }}
                             <p class="help-block">(required)</p>
-                            <div class="alert alert-warning" id="username_alert">
+                            <div class="alert alert-warning" id="registration_username_alert">
                                 <strong>Warning!</strong> Please enter your desired user name
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                         <div class="controls">
                             {{ form.render('registration_email', ['class': 'form-control']) }}
                             <p class="help-block">(required)</p>
-                            <div class="alert alert-warning" id="email_alert">
+                            <div class="alert alert-warning" id="registration_email_alert">
                                 <strong>Warning!</strong> Please enter your email
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                         <div class="controls">
                             {{ form.render('registration_password', ['class': 'form-control']) }}
                             <p class="help-block">(minimum 8 characters)</p>
-                            <div class="alert alert-warning" id="password_alert">
+                            <div class="alert alert-warning" id="registration_password_alert">
                                 <strong>Warning!</strong> Please provide a valid password
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                         <label class="control-label" for="repeatPassword">Repeat Password</label>
                         <div class="controls">
                             {{ password_field('registration_repeatPassword', 'class': 'input-xlarge') }}
-                            <div class="alert" id="repeatPassword_alert">
+                            <div class="alert alert-warning" id="registration_repeatPassword_alert">
                                 <strong>Warning!</strong> The password does not match
                             </div>
                         </div>

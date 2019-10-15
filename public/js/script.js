@@ -1,4 +1,3 @@
-
 var SignUp = {
     check: function (id) {
         if ($.trim($("#" + id)[0].value) == '') {
@@ -11,21 +10,21 @@ var SignUp = {
         return true;
     },
     validate: function () {
-        if (SignUp.check("name") == false) {
+        if (SignUp.check("registration_name") == false) {
             return false;
         }
-        if (SignUp.check("username") == false) {
+        if (SignUp.check("registration_username") == false) {
             return false;
         }
-        if (SignUp.check("email") == false) {
+        if (SignUp.check("registration_email") == false) {
             return false;
         }
-        if (SignUp.check("password") == false) {
+        if (SignUp.check("registration_password") == false) {
             return false;
         }
-        if ($("#password")[0].value != $("#repeatPassword")[0].value) {
-            $("#repeatPassword")[0].focus();
-            $("#repeatPassword_alert").show();
+        if ($("#registration_password")[0].value != $("#registration_repeatPassword")[0].value) {
+            $("#registration_repeatPassword")[0].focus();
+            $("#registration_repeatPassword_alert").show();
 
             return false;
         }
@@ -35,4 +34,5 @@ var SignUp = {
 
 $(document).ready(function () {
     $("#registerForm .alert").hide();
+
 });

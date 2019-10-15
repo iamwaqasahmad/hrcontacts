@@ -27,7 +27,7 @@ extensions:
 modules:
     config:
         Db:
-            dsn: 'mysql:host=localhost;dbname=abc;charset=utf8;Type:InnoDB'
+            dsn: 'mysql:host=localhost;dbname=phalcon04;charset=utf8;Type:InnoDB'
             user: 'phalcon'
             password: 'waqas123'
             dump: tests/_data/phalcon01.sql
